@@ -1,0 +1,145 @@
+:root{
+    --green-avoking: #00594f;
+    --green-avoking-hover: #109989;
+    --white:#fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif,Arial, Helvetica;
+}
+img{
+    width: 100%;
+    display: block;
+}
+.navbar{
+    width: 100%;
+    background-color: var(--green-avoking);
+    padding: 2rem;
+    .nav__logo{
+        width: 30%;
+    }
+}
+
+.principal__content{
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .main__title{
+        text-align: center;
+        margin-bottom: 2rem;
+        max-width: 1024px;
+    }
+    .main__questions{
+        
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        max-width: 1024px;
+        .question__container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+            
+            .question__text{
+                display: flex;
+                gap: 1rem;
+                .question__id{
+                    font-weight: 700;
+                }
+            }
+            .question__radioButtons{
+                display: flex;
+                gap: .5rem;
+                text-align: center;
+                .answer{
+                    
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    gap: 1rem;
+                    input{
+                        cursor: pointer;
+                    }
+                    
+                }
+            }
+            
+        }
+        .question__block{
+            
+            display: flex;
+            gap: 1rem;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+
+            .btn__container{
+               
+                .btn{
+                    padding: .5rem 1.2rem;
+                    border: none;
+                    font-weight: bold;
+                    color: white;
+                    border-radius: .5rem;
+                    cursor: pointer;
+                }
+                .button__si{
+                    background: green;
+                    &:hover{
+                        background: rgb(5, 198, 5);
+                    }
+                }
+                .button__no{
+                    background: red;
+                    &:hover{
+                        background: rgb(222, 82, 82);
+                    }
+                }
+            }
+        }
+    }
+    .button{
+        display: flex;
+        justify-content: center;
+        padding: 2rem;
+        .button__send{
+            background: var(--green-avoking);
+            padding: 1rem 2rem;
+            color: var(--white);
+            font-weight: 600;
+            letter-spacing: 1px;
+            font-size: 18px;
+            border: none;
+            border-radius: 30px;
+            &:hover{
+                background: var(--green-avoking-hover);
+                cursor: pointer;
+            }
+            
+        }
+    }
+
+    
+}
+
+@media(min-width: 776px){
+    .navbar{
+        
+        .nav__logo{
+            width: 15%;
+        }
+    }
+
+    .question__radioButtons{
+        gap: 4rem !important;
+    }
+    
+}
